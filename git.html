@@ -1,0 +1,683 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>智能科技企业网站</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+<style>
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-ali  gn: top;
+}
+
+body {
+    line-height: 1.2;
+    color: #000000;
+    font-size: 14px;
+}
+
+a {
+	text-decoration: none;
+}
+
+.clearfix::after {
+	display: block;
+	content: '';
+	clear: both;
+}
+
+.wrapper {
+	width: 1440px;
+	margin: 0 auto;
+	box-sizing: border-box;
+	max-width: 100%;
+	padding: 0 10px;
+}
+
+/* 头部 */
+.header-container {
+	background: #FFFFFF url(./image/bg.png) no-repeat center/cover;
+	position: relative;
+}
+
+.bg-decoration .outer-light {
+	position: absolute;
+	width: 7.8%;
+	top: 0;
+	left: 16%;
+}
+.bg-decoration .outer-light::before {
+	display: block;
+	content: '';
+	padding-top: 88.8%;
+}
+
+.bg-decoration .inner-light {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url('./image/lamp1.png') no-repeat center/contain;
+}
+.bg-decoration .inner-light::before, .bg-decoration .inner-light::after {
+	display: block;
+	content: '';
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	background: url('./image/lamp1.png') no-repeat center/contain;
+}
+
+.bg-decoration .inner-light::before {
+	right: 100%;
+	top: 100%;
+}
+.bg-decoration .inner-light::after {
+	right: 200%;
+	top: 200%;
+}
+
+.header {
+	background: rgba(255, 255, 255, 0.2);
+	padding: 20px 0;
+}
+
+.header .icon{
+	float: left;
+}
+
+.navs {
+	float: right;
+}
+
+.nav-item {
+	float: left;
+}
+
+.nav-item a {
+	display: block;
+	color: white;
+	margin-left: 20px;
+	line-height: 18px;
+	padding: 8px 30px;
+	border-radius: 20px;
+	transition: 0.2s;
+}
+.nav-item a.active, .nav-item a:hover{
+	color: #47a4f5;
+	background: #ffffff;
+}
+
+
+.header-content{	
+	color: white;
+	font-size: 15px;
+	width: 1220px;
+	margin: 0 auto;
+	max-width: 100%;
+	padding: 4% 10px 10%;
+	box-sizing: border-box;
+}
+.header-content h1 {
+	font-size: 38px;
+	padding-bottom: 20px;
+	line-height: 1.5;
+}
+
+.header-content .description {
+	font-size: 18px;
+	line-height: 2;
+}
+
+.more-button {
+	background: #ffffff;
+	border-radius: 30px;
+	color: #47a4f5;
+	line-height: 18px;
+	padding: 8px 20px;
+	display: inline-block;
+	margin-top: 30px;
+	vertical-align: top;
+	font-size: 14px;
+	font-weight: normal;
+}
+
+.header-content .caption {
+	float: left;
+	width: 44%;
+	padding-top: 10%;
+}
+.header-content .figure {
+	float: right;
+	width: 53%;
+	padding-left: 3%;
+	position: relative;
+}
+
+.header-content .machine {
+	position: relative;
+}
+.header-content .machine::before {
+	display: block;
+	content: '';
+	padding-top: 75%;
+	background: url(./image/ad.png) no-repeat center/contain;
+}
+.header-content .worker{
+	width: 14%;
+	position: absolute;
+	right: 0;
+	top: 21%;
+}
+.header-content .worker::before {
+	display: block;
+	content: '';
+	padding-top: 250%;
+	background: url(./image/bm.png) no-repeat center/contain;
+}
+.header-content .people {
+	width: 19%;
+	position: absolute;
+	left: 19%;
+	bottom: -14%;
+}
+.header-content .people::before {
+	display: block;
+	content: '';
+	padding-top: 200%;
+	background: url(./image/zc.png) no-repeat center/contain;
+}
+
+
+/* 模块通用title */
+.module-title {
+	text-align: center;
+	padding-bottom: 50px;
+}
+
+.module-title h2 {
+	font-size: 40px;
+}
+
+.module-title h3 {
+	font-size: 14px;
+	font-weight: normal;
+}
+
+
+/* 我们的技术 */
+.our-technology {
+	padding: 7% 0 9%;
+}
+.our-technology .description {
+	max-width: 900px;
+	text-align: center;
+	margin: 0 auto;
+	line-height: 2;
+	padding-bottom: 50px;
+}
+
+.our-technology .description .first {
+	max-width: 640px;
+	margin: 0 auto;
+}
+
+.our-technology .type-item {
+	float: left;
+	margin-left: 2%;
+	width: 32%;
+	border-radius: 8px;
+	background: #ffffff no-repeat center/80% auto;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+.our-technology .type-item::before {
+	display: block;
+	content: '';
+	padding-top: 91%;
+}
+.our-technology .type-item-1 {
+	margin-left: 0;
+	background-image: url('./image/love.png');
+}
+.our-technology .type-item-2 {
+	background-image: url('./image/haitang.png');
+}
+.our-technology .type-item-3 {
+	background-image: url('./image/yinghua.png');
+}
+
+
+/* 品牌 */
+.brand {
+	background-color: #f8f8f8;
+	padding-top: 5%;
+	padding-bottom: 5%;
+}
+.brand .wrapper {
+	width: 1220px;
+}
+.brand .icon-list {
+	float: left;
+	text-align: center;
+	width: 70%;
+}
+.brand .item {
+	float: left;
+	width: 30%;
+	border-right: 1px solid #ddd;
+}
+.brand .icon {
+	display: inline-block;
+	height: 60px;
+	width: 60px;
+	background: url('./image/5.png') no-repeat center/contain;
+	margin-bottom: 20px;
+}
+.brand .icon-2 {
+	background-image: url('./image/3.png');
+}
+.brand .icon-3 {
+	background-image: url('./image/2.png');
+}
+.brand .describe {
+	font-size: 16px;
+}
+.brand .describe .title {
+	margin-bottom: 6px;
+}
+.brand .company{
+	float: right;
+	width: 30%;
+}
+.brand .company h3 {
+	font-size: 25px;
+	padding-bottom: 20px;
+}
+
+.brand .company .state{
+	font-size: 13px;
+	color: #666;
+}
+
+.brand .company .more {
+	text-align: right;
+}
+
+
+/* 创新科技 */
+.technology {
+	padding-top: 5%;
+	padding-bottom: 5%;
+}
+
+.technology .wrapper {
+	width: 1220px;
+}
+
+.technology .description {
+	color: #666;
+	text-align: center;
+	line-height: 2;
+	margin-bottom: 50px;
+}
+
+.technology .item {
+	float: left;
+	width: 49%;
+	margin-left: 2%;
+	margin-bottom: 2%;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+	box-sizing: border-box;
+	padding: 20px;
+}
+.technology .item::after {
+	display: block;
+	content: "";
+	clear: both;
+}
+.technology .item:nth-child(2n+1) {
+	margin-left: 0;
+}
+.technology .caption {
+	float: left;
+	width: 58%;
+}
+.technology .figure {
+	float: right;
+	width: 30%;
+}
+.technology h6 {
+	color: #47a4f5;
+	font-size: 23px;
+	font-weight: normal;
+	padding-bottom: 20px;
+}
+.technology .smart{
+	font-size: 15px
+}
+
+
+/* 关于我们 */
+.about-our {
+	background-color: #f8f8f8;
+	padding-top: 5%;
+	padding-bottom: 5%;
+}
+.about-our .description {
+	color: #666;
+	margin-bottom: 30px;
+	text-align: center;
+	line-height: 2;
+}
+
+.about-our .more {
+	text-align: center;
+}
+
+.about-our .more-button {
+	color: #ffffff;
+	background-color: #47a4f5;
+}
+
+
+/* footer */
+.footer {
+	background: url(./image/bg.png) no-repeat center/cover;
+	color: #ffffff;
+	padding-top: 2%;
+}
+.footer .contact {
+	padding-bottom: 5%;
+}
+.footer .contact .module-title {
+	color: #ffffff;
+	padding-bottom: 20px;
+}
+
+.footer .contact .description {
+	font-size: 26px;
+	text-align: center;
+}
+
+.footer .list {
+	padding-bottom: 3%;
+}
+
+.footer .item {
+	float: left;
+	width: 16%;
+}
+
+.footer .item p {
+	padding-bottom: 16px;
+}
+
+.footer .item p:nth-child(1) {
+	font-weight: bold;
+	padding-bottom: 20px;
+}
+
+.footer .grade {
+	width: 36%;
+	padding-top: 20px;
+}
+.footer .grade h3 {
+	font-size: 30px;
+	padding-bottom: 20px;
+}
+.footer .grade p {
+	font-size: 20px;
+}
+
+.footer .last {
+	border-top: 1px solid #ffffff;
+	padding: 20px 0;
+	text-align: center;
+}
+</style>
+
+<body>
+	<div class="header-container">
+		<div class="bg-decoration">
+			<div class="outer-light">
+				<div class="inner-light"></div>
+			</div>
+		</div>
+			<div class="header clearfix">
+	    	<div class="wrapper">
+		    	<div class="icon">
+		    		<img src="./image/icon.png" width="90px">
+		    	</div>
+		    	<ul class="navs clearfix">
+					<li class="nav-item"><a href="#news">科技</a></li>
+					<li class="nav-item"><a href="#about">机器人</a></li>
+					<li class="nav-item"><a href="#contact">大数据</a></li>
+					<li class="nav-item"><a href="#news">自动化</a></li>
+					<li class="nav-item"><a class="active" href="#home">Sign in</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- banner -->
+		<div class="header-content clearfix"> 
+			<div class="caption">
+				<h1 class="page-title">
+					<p>全自动化</p>
+					<p>高科技生产技术</p>
+				</h1>
+				<p class="description">对于研究者和决策者来说,从统计意义上弄清楚三者的概念，与关系，对于正确理解和使用是十分必要的</p>
+				<div class="more">
+					<a href="" class="more-button">了解更多 >></a>
+				</div>
+			</div>
+
+			<div class="figure">
+				<div class="worker"></div>
+				<div class="machine"></div>
+				<div class="people"></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 我们的技术 -->
+    <div class="our-technology">
+    	<div class="wrapper">
+    		<div class="info">
+    			<div class="module-title">
+    				<h2>我们的技术</h2>
+		    		<h3>OUR TECHNOLOGY</h3>
+    			</div>
+		    	<div class="description">
+		    		<p class="first">
+		    			人工智能从字面上看就是人类的智慧，但是实际上通融了不少，大家最关心的实际上是人工自主意识，因为网络和电脑已经完成了知识的检索和存储，几大搜索引擎也完成了关键字
+		    		</p>
+		    			关联解释的功能和海量数据积累，而且大多数机器人已经完成了反应机、自适应等高级功能，但是还是没有能出现通过图灵测试的人工自主意识，当然这也包含了人类对自身意识的研究没有上升到更透彻的层面。
+		    		</p>
+		    	</div>
+    		</div>
+			<ul class="type-list clearfix">
+				<li class="type-item type-item-1"></li>
+				<li class="type-item type-item-2"></li>
+				<li class="type-item type-item-3"></li>
+			</ul>	
+    	</div>
+	</div>
+
+	<!-- 品牌 -->
+	<div class="brand">
+		<div class="wrapper clearfix">
+			<ul class="icon-list clearfix">
+				<li class="item">
+					<div class="describe">
+						<i class="icon icon-1"></i>
+			    	 	<h4 class="title">商店</h4>
+			    	 	<p class="desc">无人模式无人模式</p>
+				    </div>
+				</li>
+				<li class="item">
+					<div class="describe">
+						<i class="icon icon-2"></i>
+			    	 	<h4 class="title">商店</h4>
+			    	 	<p class="desc">无人模式无人模式</p>
+				    </div>
+				</li>
+				<li class="item">
+					<div class="describe">
+						<i class="icon icon-3"></i>
+			    	 	<h4 class="title">商店</h4>
+			    	 	<p class="desc">无人模式无人模式</p>
+				    </div>
+				</li>
+			</ul>
+	    	<div class="company">
+	    		<h3>上市公司旗下品牌，更有保障</h3>
+	    		<p class="state">事实证明，了解清楚这6个问题，学员就能找到合适的培训机构；围绕这些问题，千库全面解答，帮助学员选择好机构事实证明，了解清楚这6个问题，学员就能找到合适的培训机构；围绕这些问题，千库全面解答，帮助学员选择好机构事实证明，了解清楚这6个问题，学员就能找到合适的培训机构；围绕这些问题，千库全面解答，帮助学员选择好机构。</p>
+	    		<div class="more">
+					<a href="" class="more-button">了解更多 >></a>
+				</div>
+	    	</div>
+		</div>
+	</div>
+
+	<!-- 创新科技 -->
+    <div class="technology">
+    	<div class="wrapper">
+    		<div class="info">
+    			<div class="module-title">
+    				<h2>创新科技</h2>
+		    		<h3>INNOVATIVE TECHNOLOGY</h3>
+    			</div>
+		    	<div class="description">
+			    	<p>管理者在面试时必问的问题就是，“你为什么选择来我们这里？”但是坦白讲，</p>
+					<p>很多人问这个问题不过是模式化的提问，得到的信息很浅显。</p>
+					<p>有的管理者不解，说我招人只需要它的能力符合就可以了，我是让他来干活的，至于他为什么要干，我并不关心。</p>
+		    	</div>
+    		</div>
+    		<ul class="list clearfix">
+    			<li class="item item-ai">
+    				<div class="caption">
+    					<h6>AI智能</h6>
+						<p class="smart">业务拓展到新领域，以前跟随打天下值得信任的人都不熟悉这个领域，要寻找这个领域的人才，对这个领域的哪些人真正胜任心...</p>
+    				</div>
+					<div class="figure">
+						<img src="./image/love.png">
+					</div>
+				</li>
+				<li class="item item-robot">
+    				<div class="caption">
+    					<h6>机器人</h6>
+						<p class="smart">业务拓展到新领域，以前跟随打天下值得信任的人都不熟悉这个领域，要寻找这个领域的人才，对这个领域的哪些人真正胜任心...</p>
+    				</div>
+					<div class="figure">
+						<img src="./image/love.png">
+					</div>
+				</li>
+				<li class="item item-wisdom">
+					<div class="caption">
+    					<h6>科技</h6>
+						<p class="smart">业务拓展到新领域，以前跟随打天下值得信任的人都不熟悉这个领域，要寻找这个领域的人才，对这个领域的哪些人真正胜任心...</p>
+    				</div>
+					<div class="figure">
+						<img src="./image/love.png">
+					</div>
+				</li>
+				<li class="item item-software">
+					<div class="caption">
+    					<h6>软件</h6>
+						<p class="smart">业务拓展到新领域，以前跟随打天下值得信任的人都不熟悉这个领域，要寻找这个领域的人才，对这个领域的哪些人真正胜任心...</p>
+    				</div>
+					<div class="figure">
+						<img src="./image/love.png">
+					</div>
+				</li>
+    		</ul>
+    	</div>
+	</div>
+
+	<!-- 关于我们 -->
+	<div class="about-our">
+		<div class="wrapper">
+			<div class="module-title">
+				<h2>关于我们</h2>
+	    		<h3>ABOUT US</h3>
+			</div>
+	    	<div class="description">
+				<p>眼光更加长远。毕竟随着公司做大，也意味着越来越多的员工不理解公司的价值观。在某些看着不重要的岗位上，比如客</p>
+				<p>服，如果他对自己的定位只是接电话，那就会尽可能减少自己的工作，不会主动反应问题。</p>
+				<p>相反，如果客服的动机是帮助别人，那个岗位其实是最好的用户沟通平台,很多隐藏问题都能得到及早解决，</p>
+				<p>当整个企业的员工都能从长远的角度思考问题，这家公司的产品一定更有品质；</p>
+	    	</div>
+    		<div class="more">
+				<a href="" class="more-button">查看更多</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer">
+		<div class="wrapper">
+			<div class="contact">
+				<div class="module-title">
+					<h2>联系我们</h2>
+		    		<h3>CONTACT US</h3>
+				</div>
+				<p class="description">简单要从元素做起 - 用心打造版权优 质素材库</p>
+			</div>
+			<ul class="list clearfix">
+			    <li class="item grade">
+		    	   <h3>千库网</h3>
+		    	   <p>致力于为所有用户提供最优质的的素材</p>
+		    	   <p>用心为用户服务诚信让用户信任</p>
+		    	</li>
+		        <li class="item element">
+		         	<p>免扣元素</p>
+		    	    <p>春分</p>
+		    	    <p>新势力周</p>
+		    	    <p>箭头</p>
+		    	    <p>玫瑰花</p>
+		    	    <p>化妆品</p>
+		    	</li>
+		        <li class="item spring">
+		            <p>免扣元素</p>
+		    	    <p>春分</p>
+		    	    <p>新势力周</p>
+		    	    <p>箭头</p>
+		    	    <p>玫瑰花</p>
+		    	    <p>化妆品</p>
+		    	</li>
+		    	<li class="item arrow">
+		    	 	<p>免扣元素</p>
+		    	    <p>春分</p>
+		    	    <p>新势力周</p>
+		    	    <p>箭头</p>
+		    	    <p>玫瑰花</p>
+		    	    <p>化妆品</p>
+		    	</li>
+		        <li class="item flower"> 
+		            <p>免扣元素</p>
+		    	    <p>春分</p>
+		    	    <p>新势力周</p>
+		    	    <p>箭头</p>
+		    	    <p>玫瑰花</p>
+		    	    <p>化妆品</p>
+		    	</li>
+			</ul>
+	    	<div class="last">
+	    		<p>千库网 Copyright @ 2014-2019 泸IC备10011451号-26  用时：0.0012  关于我们  注册申明  版权申明  售后服务</p>
+	    	</div>
+		</div>
+    </div>   
+ </body>
+ </html>
